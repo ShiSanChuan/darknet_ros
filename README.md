@@ -23,10 +23,10 @@
 ```
 cd catkin_ws/src
 git clone https://github.com/AutonomyLab/bebop_autonomy.git
-git clone https://github.com/ShiSanChuan/UAV-target-tracking.git
+git clone https://github.com/ShiSanChuan/darknet_ros.git
 cd ..
 catkin build bebop_autonomy
-catkin build UAV-target-tracking -DCMAKE_BUILD_TYPE=Release
+catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
 <!--  -->
 source devel/setup.bash
 ```
@@ -59,15 +59,15 @@ rostopic pub --once /bebop/land std_msgs/Empty
 ## Parament
 - 安装原darknet_ros程序步骤，需要将训练模型的weight和cfg文件配置好，比赛识别的目标是气球因此专门为气球识别训练了几组weight
 ```
-catkin_wc/src/UAV-target-tracking/darknet_ros/yolo_network_config/weights/
-catkin_wc/src/UAV-target-tracking/darknet_ros/yolo_network_config/cfg/
+catkin_wc/src/darknet_ros/darknet_ros/yolo_network_config/weights/
+catkin_wc/src/darknet_ros/darknet_ros/yolo_network_config/cfg/
 ```
 - 在launch文件里修改launch启动文件,yaml文件设置识别阈值和目标类型
 
 ```
-catkin_wc/src/UAV-target-tracking/darknet_ros/launch/yolo_v3.launch
+catkin_wc/src/darknet_ros/darknet_ros/launch/yolo_v3.launch
 
-<rosparam command="load" ns="darknet_ros" file="$(find UAV-target-tracking)/config/yolov3-MBZIRC.yaml"/>
+<rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/yolov3-MBZIRC.yaml"/>
 ```
 
 ## used on other UAV
