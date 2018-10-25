@@ -1,6 +1,7 @@
 # parrot2无人机yolov3目标物体追踪
 
 - yolov3目标识别
+- opencv颜色识别
 - 物体追踪
 - 无目标搜索（施工中）
 
@@ -10,6 +11,8 @@
 - [ROS](www.ros.org)是一款为机器人设计的系统框架，[parrot2](http://www.parrot.com.cn/)无人机提供ROS的开发通信环境[bebop_autonomy](http://wiki.ros.org/bebop_autonomy)；
 - [darknet yolov3](https://pjreddie.com/darknet/yolo/)是深度学习的目标检测框架，C++/C编写；
 - 这个项目是基于一位外国的github的项目修改的[darknet_ros](https://github.com/leggedrobotics/darknet_ros)项目。
+
+<img src="doc/record.gif">
 
 ## Prepare
 - 笔记本配置：i5，GTX1060
@@ -27,7 +30,7 @@ git clone https://github.com/ShiSanChuan/darknet_ros.git
 cd ..
 catkin build bebop_autonomy
 catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
-<!--  -->
+
 source devel/setup.bash
 ```
 ### Download weights
@@ -52,8 +55,21 @@ roslaunch darknet_ros yolo_v3.launch
 rostopic pub --once /bebop/land std_msgs/Empty
 ```
 
+<img src="doc/opencv_detect.png">
+
+<img src="doc/YOLO V3_screenshot_25.09.2018.png">
+
+- opencv颜色提取获取参数，使用的是RGB设置的阈值，可修改为HSV，文件中有个全色图圈可用来测试下范围,调整完的参数在程序中修改
+```
+cd doc
+g++ -std=c++11 Inrang.cpp -o Inrang  `pkg-config --cflags --libs opencv`
+./Inrang YOLO V3_screenshot_17.10.2018.png
+```
+<img src="doc/opencv_use.png">
+
 ## Thinking
 - 通过深度学习框架比如yolo来识别物体是可以的，不过受到图片尺寸问题，对于近处目标（大概3米）的目标可以识别，但对于远处目标（在parrot传来的428x240图片里大概占5个像素），这种目标是无法分辨出来的，因此在原基础代码上添加opencv的颜色识别的线程，用于辅助yolo的识别，使得无人机在比较远处能先靠近物体，若不是该目标物体再移动视角环境，找下一个疑似目标；
+
 - 由于目标是移动的或者静止的，因此通过PID调整飞行参数使得目标的中心位置与图像中心位置重合。
 
 ## Parament

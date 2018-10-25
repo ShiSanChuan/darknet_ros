@@ -1,0 +1,1362 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"In",
+				"Inrang.cpp"
+			],
+			[
+				"re",
+				"recall_score\tfunction"
+			],
+			[
+				"pre",
+				"predict_y\tstatement"
+			],
+			[
+				"tes",
+				"test_svm_y\tstatement"
+			],
+			[
+				"tra",
+				"train_original"
+			],
+			[
+				"tr",
+				"train_svm_y\tstatement"
+			],
+			[
+				"cl",
+				"clf\tstatement"
+			],
+			[
+				"train",
+				"train_original\tstatement"
+			],
+			[
+				"vs",
+				"vstack\tfunction"
+			],
+			[
+				"txt",
+				"text_test_train\tstatement"
+			],
+			[
+				"tex",
+				"text_test_train\tstatement"
+			],
+			[
+				"te",
+				"test_svm_x\tstatement"
+			],
+			[
+				"fit",
+				"fit_transform\tfunction"
+			],
+			[
+				"v",
+				"vocabulary\tstatement"
+			],
+			[
+				"X",
+				"X_pca\tstatement"
+			],
+			[
+				"n",
+				"n_components\tparam"
+			],
+			[
+				"co",
+				"columns\tparam"
+			],
+			[
+				"ge",
+				"get_feature_names\tfunction"
+			],
+			[
+				"get",
+				"get_custom_stopwords\tfunction"
+			],
+			[
+				"st",
+				"stopwords\tstatement"
+			],
+			[
+				"max",
+				"max_df\tparam"
+			],
+			[
+				"lab",
+				"lambda\tkeyword"
+			],
+			[
+				"fi",
+				"fit_transform\tfunction"
+			],
+			[
+				"tok",
+				"token_pattern\tparam"
+			],
+			[
+				"str",
+				"strip_accents\tparam"
+			],
+			[
+				"min",
+				"min_df\tparam"
+			],
+			[
+				"doc",
+				"doc_test_vec\tstatement"
+			],
+			[
+				"cor",
+				"corpus\tstatement"
+			],
+			[
+				"all",
+				"all_doc_list\tstatement"
+			],
+			[
+				"strin",
+				"strings\tparam"
+			],
+			[
+				"Tf",
+				"TfidfVectorizer\tclass"
+			],
+			[
+				"lo",
+				"loadtxt\tfunction"
+			],
+			[
+				"La",
+				"LabelEncoder\tclass"
+			],
+			[
+				"dark",
+				"darknet_ros"
+			],
+			[
+				"aim",
+				"aimarea"
+			],
+			[
+				"l",
+				"linear"
+			],
+			[
+				"xm",
+				"xmax"
+			],
+			[
+				"ym",
+				"ymin"
+			],
+			[
+				"ai",
+				"aimy"
+			],
+			[
+				"beb",
+				"bebop_head"
+			],
+			[
+				"ros",
+				"rossubstring\tros Subscriber string"
+			],
+			[
+				"pu",
+				"publish"
+			],
+			[
+				"con",
+				"const\tconst"
+			],
+			[
+				"a",
+				"advertiseService\tros::ServiceServer advertiseService(ros::AdvertiseServiceOptions &ops)"
+			],
+			[
+				"E",
+				"Empty\tEmpty"
+			],
+			[
+				"P",
+				"Publisher\tPublisher"
+			],
+			[
+				"i",
+				"init\tvoid init(int &argc, char **argv, const std::string &name)"
+			],
+			[
+				"creat",
+				"createTrackbar\tint createTrackbar(const cv::String &trackbarname, const cv::String &winname, int *value, int count)"
+			],
+			[
+				"th",
+				"thread"
+			],
+			[
+				"en",
+				"endif"
+			],
+			[
+				"fc",
+				"fc_22\tstatement"
+			],
+			[
+				"po",
+				"pool_4\tstatement"
+			],
+			[
+				"s",
+				"slim\tmodule"
+			],
+			[
+				"sea",
+				"saver\tstatement"
+			],
+			[
+				"trai",
+				"train_y\tstatement"
+			],
+			[
+				"cr",
+				"cross_entropy\tstatement"
+			],
+			[
+				"Ada",
+				"AdamOptimizer\tclass"
+			],
+			[
+				"exp",
+				"expand_dims\tfunction"
+			],
+			[
+				"ima",
+				"image\tmodule"
+			],
+			[
+				"res",
+				"resize_images\tfunction"
+			],
+			[
+				"im",
+				"image\tmodule"
+			],
+			[
+				"on",
+				"one_hot\tfunction"
+			],
+			[
+				"p",
+				"print\tfunction"
+			],
+			[
+				"poo",
+				"pool_10\tstatement"
+			],
+			[
+				"wa",
+				"waitKey\tfunction"
+			],
+			[
+				"tri",
+				"train\tmodule"
+			],
+			[
+				"flo",
+				"float64\tinstance"
+			],
+			[
+				"dis",
+				"DisplayRobotState\tDisplayRobotState"
+			],
+			[
+				"Pub",
+				"Publication\tPublication"
+			],
+			[
+				"ur",
+				"urdf_file"
+			],
+			[
+				"ini",
+				"initFile\tbool initFile(const std::string &filename)"
+			],
+			[
+				"urd",
+				"urdf_file\tstd::string urdf_file"
+			],
+			[
+				"in",
+				"initParam\tbool initParam(const std::string &param)"
+			],
+			[
+				"fil",
+				"filename\tstd::string filename"
+			],
+			[
+				"cre",
+				"createQuaternionMsgFromRollPitchYaw\tgeometry_msgs::Quaternion createQuaternionMsgFromRollPitchYaw(double roll, double pitch, double yaw)"
+			],
+			[
+				"int",
+				"int16_t\tint16_t"
+			],
+			[
+				"crea",
+				"createQuaternionFromRPY\ttf::Quaternion createQuaternionFromRPY(double roll, double pitch, double yaw)"
+			],
+			[
+				"set",
+				"setOrigin\tvoid setOrigin(const tf::Vector3 &origin)"
+			],
+			[
+				"Tra",
+				"Transform\tTransform"
+			],
+			[
+				"Tr",
+				"TransformBroadcaster\tTransformBroadcaster"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"Im",
+				"Imu\tImu"
+			],
+			[
+				"sensor_",
+				"sensor_msgs"
+			],
+			[
+				"adve",
+				"advertise\tros::Publisher advertise<class M>(const std::string &topic, uint32_t queue_size)"
+			],
+			[
+				"sta",
+				"start_flag\tint start_flag"
+			],
+			[
+				"t",
+				"Timeout"
+			],
+			[
+				"cha",
+				"chatter_pub\tint chatter_pub"
+			],
+			[
+				"std",
+				"std_msgs"
+			],
+			[
+				"pt",
+				"pt1\tcv::Point pt1"
+			],
+			[
+				"y",
+				"y0"
+			],
+			[
+				"Poi",
+				"Point\tPoint"
+			],
+			[
+				"szi",
+				"size_t\tsize_t"
+			],
+			[
+				"Ho",
+				"HoughLines\tvoid HoughLines(InputArray image, OutputArray lines, double rho, double theta, int threshold)"
+			],
+			[
+				"Vec",
+				"Vec2f\tVec2f"
+			],
+			[
+				"COLOR_B",
+				"COLOR_BGR2GRAY\tcv::ColorConversionCodes COLOR_BGR2GRAY"
+			],
+			[
+				"thres",
+				"threshold\tdouble threshold(InputArray src, OutputArray dst, double thresh, double maxval, int type)"
+			],
+			[
+				"find",
+				"find\tsize_type find(const char *__s) const"
+			],
+			[
+				"de",
+				"demo6_1.png\tw:719 h:400"
+			],
+			[
+				"pa",
+				"para"
+			],
+			[
+				"_",
+				"_chrom_num"
+			],
+			[
+				"row",
+				"row\tcv::Mat row(int y) const"
+			],
+			[
+				"da",
+				"dataPoint"
+			],
+			[
+				"data",
+				"dataPoint\tstd::vector<std::pair<float, float> > dataPoint"
+			],
+			[
+				"Gr",
+				"Green\tconst cvplot::Color Green"
+			],
+			[
+				"add",
+				"addValue\tcvplot::Series & addValue(const std::vector<float> &values)"
+			],
+			[
+				"gen",
+				"gene1"
+			],
+			[
+				"Po",
+				"Popula"
+			],
+			[
+				"CV8",
+				"CV_8UC1\tCV_8UC1"
+			],
+			[
+				"tran",
+				"transpose\tvoid transpose(InputArray src, OutputArray dst)"
+			],
+			[
+				"be",
+				"best"
+			],
+			[
+				"inde",
+				"indexi\tint indexi"
+			],
+			[
+				"Point",
+				"Point2d\tPoint2d"
+			],
+			[
+				"sq",
+				"sqrt\tdouble sqrt(double __x)"
+			],
+			[
+				"Poin",
+				"Point2d\tPoint2d"
+			],
+			[
+				"CV",
+				"CV_32FC1"
+			],
+			[
+				"_p",
+				"_p_mut"
+			],
+			[
+				"GA",
+				"GA_TSP"
+			],
+			[
+				"cop",
+				"copyTo\tvoid copyTo(OutputArray m) const"
+			],
+			[
+				"Ex",
+				"exp\tvoid exp(InputArray src, OutputArray dst)"
+			],
+			[
+				"Sca",
+				"Scalar\tScalar"
+			],
+			[
+				"inp",
+				"in_imp"
+			],
+			[
+				"par",
+				"para_num"
+			],
+			[
+				"b",
+				"BPsolve\tvoid BPsolve(cv::Mat &_input, cv::Mat &_output)"
+			],
+			[
+				"imp",
+				"imp_out_b\tcv::Mat imp_out_b"
+			],
+			[
+				"in_im",
+				"in_imp_b\tcv::Mat in_imp_b"
+			],
+			[
+				"in_",
+				"in_imp_b\tcv::Mat in_imp_b"
+			],
+			[
+				"col",
+				"cols\tint cols"
+			],
+			[
+				"ro",
+				"rowRange\tcv::Mat rowRange(int startrow, int endrow) const"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3065,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/                                                             \n-rw-rw-r--  1 shisanchuan shisanchuan   270 10月  15 10:45 .git\nignore                                                        \n-rw-rw-r--  1 shisanchuan shisanchuan  1550 9月   23 14:13 LICE\nNSE                                                           \n-rw-rw-r--  1 shisanchuan shisanchuan  4485 10月  24 16:42 READ\nME.md                                                         \n-rw-rw-r--  1 shisanchuan shisanchuan 26014 10月  19 14:07 work\n.sublime-workspace                                            \nshisanchuan@ssc:~/catkin_ws/src/darknet_ros$ git push         \n对 象 计 数 中 : 34, 完 成 .                                         \nDelta compression using up to 4 threads.                      \n压 缩 对 象 中 : 100% (34/34), 完 成 .                               \n写 入 对 象 中 : 100% (34/34), 257.03 MiB | 783.00 KiB/s, 完 成 .    \nTotal 34 (delta 5), reused 0 (delta 0)                        \nremote: Resolving deltas: 100% (5/5), completed with 3 local o\nbjects.                                                       \nremote: error: GH001: Large files detected. You may want to tr\ny Git Large File Storage - https://git-lfs.github.com.        \nremote: error: Trace: 755fa27f73e28737db79570ff3feb1ee        \nremote: error: See http://git.io/iEPt8g for more information. \nremote: error: File darknet_ros/yolo_network_config/weights/yo\nlov3-MBZIRC_5000.weights is 234.92 MB; this exceeds GitHub's f\nile size limit of 100.00 MB                                   \nTo https://ShiSanChuan:421127ssc@github.com/ShiSanChuan/darkne\nt_ros.git                                                     \n ! [remote rejected] master -> master (pre-receive hook declin\ned)                                                           \nerror: 无 法 推 送 一 些 引 用 到  'https://ShiSanChuan:421127ssc@githu\nb.com/ShiSanChuan/darknet_ros.git'                            \nshisanchuan@ssc:~/catkin_ws/src/darknet_ros$                  \n",
+			"settings":
+			{
+				"buffer_size": 1953,
+				"line_ending": "Unix",
+				"name": "Terminal (bash)",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "Packages/User/C++.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					""
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"clean"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"rebuild_cache"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"GA"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"cvplotlib"
+				]
+			],
+			[
+				"GeneticAlgorithmByC++ (Linux)",
+				""
+			]
+		],
+		[
+			[
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					""
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"clean"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"rebuild_cache"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"GA"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"cvplotlib"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"GAlib"
+				]
+			],
+			[
+				"GeneticAlgorithmByC++ (Linux)",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					""
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build dependences"
+				],
+				[
+					"Packages/Catkin Builder/Catkin.sublime-build",
+					"build with debug flag"
+				]
+			],
+			[
+				"Packages/Catkin Builder/Catkin.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-opencv"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-armadillo"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-mlpack"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-opencv"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-armadillo"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-mlpack&boost"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				"Run-opencv"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/python3.sublime-build",
+					""
+				],
+				[
+					"Packages/User/python3.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/python3.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 504.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"bas",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"git",
+				"Git: Add All"
+			],
+			[
+				"pyth",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pyt",
+				"SublimeREPL: Python"
+			],
+			[
+				"Package Control: d",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Namespace"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"ter",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git  push",
+				"Git: Push"
+			],
+			[
+				"git  com",
+				"Git: Commit"
+			],
+			[
+				"git  ad",
+				"Git: Add Current File"
+			],
+			[
+				"git  pus",
+				"Git: Push"
+			],
+			[
+				"git  add",
+				"Git: Add All"
+			],
+			[
+				"gita",
+				"Git: Add All"
+			],
+			[
+				"clang",
+				"EasyClangComplete: Settings"
+			]
+		],
+		"width": 735.0
+	},
+	"console":
+	{
+		"height": 674.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/shisanchuan/catkin_ws/src/darknet_ros"
+	],
+	"file_history":
+	[
+		"/home/shisanchuan/C++work/GeneticAlgorithm/README.md",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/C++.sublime-build",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/doc/Inrang.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/CMakeLists.txt",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp",
+		"/home/shisanchuan/C++work/opencvtest/Inrang.cpp",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/include/darknet_ros/YoloObjectDetector.hpp",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet/src/image.c",
+		"/home/shisanchuan/catkin_ws/src/UAV-target-tracking/darknet_ros/CMakeLists.txt",
+		"/home/shisanchuan/UAV-target-tracking/darknet_ros/launch/darknet_ros.launch",
+		"/home/shisanchuan/UAV-target-tracking/darknet_ros/launch/darknet_ros_gdb.launch",
+		"/home/shisanchuan/UAV-target-tracking/darknet_ros/launch/yolo_v3.launch",
+		"/home/shisanchuan/UAV-target-tracking/README.md",
+		"/home/shisanchuan/桌面/OGeek/test_xgb_round1_hash.txt",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/launch/yolo_v3.launch",
+		"/home/shisanchuan/桌面/OGeek/train.py",
+		"/home/shisanchuan/catkin_ws/src/MARZIRC_opencv_use/src/MARZIRC_opencv_use_node.cpp",
+		"/home/shisanchuan/bebop_ws/src/bebop_autonomy/bebop_driver/test/README.md",
+		"/home/shisanchuan/bebop_ws/src/bebop_autonomy/bebop_driver/test/bebop_itl_test.test",
+		"/home/shisanchuan/catkin_ws/src/MARZIRC_opencv_use/CMakeLists.txt",
+		"/home/shisanchuan/catkin_ws/src/MARZIRC_opencv_use/package.xml",
+		"/home/shisanchuan/catkin_ws/src/joint_test/src/joint_test_node.cpp",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/src/yolo_object_detector_node.cpp",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet/src/image.h",
+		"/usr/include/assert.h",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/src/image_interface.c",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/include/darknet_ros/image_interface.h",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet/include/darknet.h",
+		"/home/shisanchuan/catkin_ws/src/darknet_ros/darknet_ros/test/test_main.cpp",
+		"/home/shisanchuan/catkin_ws/src/joint_test/CMakeLists.txt",
+		"/home/shisanchuan/catkin_ws/src/joint_test/package.xml",
+		"/home/shisanchuan/catkin_ws/src/uart_read/src/uart_read.cpp",
+		"/home/shisanchuan/catkin_ws/src/mpu6050_serial_to_imu/src/mpu6050_serial_to_imu_node.cpp",
+		"/home/shisanchuan/catkin_ws/src/uart_read/launch/demo.launch",
+		"/home/shisanchuan/catkin_ws/src/uart_read/urdf/link2.xml",
+		"/home/shisanchuan/catkin_ws/src/uart_read/urdf/link2.urdf",
+		"/home/shisanchuan/catkin_ws/src/uart_read/rviz/demo.rviz",
+		"/home/shisanchuan/catkin_ws/src/uart_read/package.xml",
+		"/home/shisanchuan/catkin_ws/src/uart_read/CMakeLists.txt",
+		"/home/shisanchuan/catkin_ws/src/mpu6050_serial_to_imu/CMakeLists.txt",
+		"/home/shisanchuan/catkin_ws/src/mpu6050_serial_to_imu/package.xml",
+		"/home/shisanchuan/C++work/leetcode/655Print Binary Tree.cpp",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/Alignment/Default (Linux).sublime-keymap",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/Alignment/Base File.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/EasyClangComplete/EasyClangComplete.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/ClangAutoComplete/ClangAutoComplete.sublime-settings",
+		"/build/glibc-Cl5G7W/glibc-2.23/csu/libc-start.c",
+		"/home/shisanchuan/C++work/leetcode/123.jpg",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/EasyClangComplete/tests/compilation_db_files/directory/compile_commands.json",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/EasyClangComplete/tests/compilation_db_files/arguments/compile_commands.json",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/EasyClangComplete.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/rossub.sublime-snippet",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/rospub.sublime-snippet",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/LaTeXTools/Insert environment.sublime-snippet",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/LaTeXTools/Wrap in environment.sublime-snippet",
+		"/home/shisanchuan/catkin_ws/src/mpu6050_serial_to_imu/src/opencv_light.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/build/Makefile",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/GeneticAlgorithmByC++.sublime-project",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/PSO.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/GA.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp",
+		"/home/shisanchuan/C++work/mlpacktest.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/demo.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_TSP.cpp",
+		"/home/shisanchuan/C++work/bulid_tree.cpp",
+		"/media/shisanchuan/C2B31627EFFD64AE/2018/mark.py",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/QGA.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/figure.h",
+		"/home/shisanchuan/.cache/.fr-1M0XA9/chapter10/main.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/E_GA.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/build/src/point.txt",
+		"/home/shisanchuan/C++work/darknet/python/darknet.py",
+		"/media/shisanchuan/Ubuntu 16.0/predata.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/build/src/adjust_data.txt",
+		"/home/shisanchuan/matlab_work/2017E/predata.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc",
+		"/home/shisanchuan/GeneticAlgorithm/build/src/adjust_data.txt",
+		"/usr/include/opencv2/core/mat.hpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp",
+		"/usr/include/c++/5/bits/stl_algo.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/internal.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/window.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/figure.cc",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/figure.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/window.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/CMakeLists.txt",
+		"/media/shisanchuan/C2B31627EFFD64AE/PY_work/tensorflow_test.py",
+		"/home/shisanchuan/文档/test.tex",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pi_TCP.cpp",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/test.tex",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/CMakeLists.txt",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/README.md",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/CMakeLists.txt",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pc_TCP.cpp"
+	],
+	"find":
+	{
+		"height": 32.0987654321
+	},
+	"find_in_files":
+	{
+		"height": 148.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cont",
+			"BEBOP_CONTROL",
+			"frame",
+			"_Change",
+			"combin_code",
+			"X_kpca",
+			"_train_svm_x",
+			"lines",
+			"train_svm",
+			"train_xgb",
+			"UAV-target-tracking",
+			"darknet_ros",
+			"pre_minor",
+			"roiBoxes_",
+			"display",
+			"draw_detections",
+			"detect_in_thread",
+			"detect_thread",
+			"demo",
+			"classLabels_",
+			"boundingBox",
+			"frameWidth_",
+			"rosBoxes_[i][j]",
+			"w",
+			"rosBoxes_[i][j].",
+			"rosBoxes_[i][j]",
+			"w",
+			"W",
+			"w",
+			"rosBoxes_[i][j].",
+			"rosBoxes_[i][j]",
+			"w",
+			"W",
+			"w",
+			"rosBoxes_[i][j].",
+			"rosBoxes_[i][j]",
+			"w",
+			"rosBoxes_[i][j].",
+			"rosBoxes_[i][j]",
+			"roiBoxes_",
+			"detectInThread",
+			"detect_thread",
+			"boundingBoxesPublisher_",
+			"boundingBoxesResults_",
+			"publishInThread",
+			"boundingBoxesPublisher_",
+			"boundingBoxesTopicName",
+			"return",
+			"init",
+			"wait_duration",
+			"demoAlphabet_",
+			"TakeoffCallback",
+			"BebopDriverNodelet",
+			"land",
+			"bebop",
+			"init",
+			"land_pub_",
+			"nh_",
+			"land_pub_",
+			"publish",
+			"TIMED_ASSERT",
+			"std_msgs::Empty",
+			"TIMED_ASSERT",
+			"build_depend",
+			"chatter_pub",
+			"contrl",
+			"ipl_",
+			"image_into_ipl",
+			"cvShowImage",
+			"show_image_cv",
+			"buff_",
+			"ipl_",
+			"cvCreateImage",
+			"cvReleaseImage",
+			"ipl_",
+			"cvCreateImage",
+			"image_into_ipl",
+			"show_image_cv",
+			"cvCreateImage",
+			"opencvdetectInThread",
+			"fetchInThread",
+			"detectLoop",
+			"displayLoop",
+			"fetchInThread",
+			"detectInThread",
+			"fetch_thread",
+			"opencv_detect_thread",
+			"detectInThread",
+			"opencv_detectThread",
+			"fetch_thread",
+			"detect_thread",
+			"src",
+			"copy_image",
+			"opencvdetectInThread",
+			"get_pixel",
+			"show_image_cv",
+			"get_pixel",
+			"detectInThread",
+			"show_image_cv",
+			"constrain_image",
+			"copy_image",
+			"show_image_cv",
+			"rgbgr_image",
+			"show_image_cv",
+			"p",
+			"show_image_cv",
+			"opencv_detectThread",
+			"cvShowImage",
+			"cvReleaseImage",
+			"show_image_cv",
+			"image",
+			"ipl_to_image",
+			"getIplImage",
+			"buff_",
+			"show_image_cv",
+			"buff_",
+			"displayInThread",
+			"opencv_detectThread",
+			"demoPrefix_",
+			"opencv_detectThread",
+			"displayInThread",
+			"displayLoop",
+			"detectInThread",
+			"fetchInThread",
+			"fetch_thread",
+			"std::thread",
+			"displayInThread",
+			"YoloObjectDetector"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/shisanchuan/catkin_ws/src/darknet_ros"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1177,
+								1177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1935,
+								1935
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
+							"caret_style": "blink",
+							"color_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
+							"default_dir": "/home/shisanchuan/catkin_ws/src/darknet_ros",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_white_space": "none",
+							"gutter": false,
+							"highlight_line": false,
+							"scroll_past_end": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminal_view": true,
+							"terminal_view_activate_args":
+							{
+								"cmd": "/bin/bash -l",
+								"cwd": "/home/shisanchuan/catkin_ws/src/darknet_ros",
+								"keep_open": false,
+								"syntax": null,
+								"title": "Terminal (bash)"
+							},
+							"terminal_view_last_cursor_pos":
+							[
+								30,
+								45
+							],
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0987654321
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 193.0
+	},
+	"output.files_to_be_deleted":
+	{
+		"height": 134.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 304.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 128.0
+	},
+	"pinned_build_system": "Packages/User/C++.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 59.2592592593
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

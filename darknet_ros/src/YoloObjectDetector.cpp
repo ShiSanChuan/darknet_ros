@@ -471,8 +471,8 @@ void YoloObjectDetector::PIDadjust(float x,float y,float Area){
   if(control.linear.z<-0.5)control.linear.z=-0.5;
 
   control.linear.x=(std::sqrt(aimarea)-std::sqrt(Area))/264.57;
-  if(control.linear.x>0.2)control.linear.x=0.2;
-  if(control.linear.x<-0.2)control.linear.x=-0.2;
+  if(control.linear.x>0.25)control.linear.x=0.25;
+  if(control.linear.x<-0.25)control.linear.x=-0.25;
   // printf("Area: %f\n",Area);
   // printf("%f\t%f\n",aimx,x);
   // printf("%f\t%f\n",aimy,y);
@@ -486,6 +486,7 @@ void *YoloObjectDetector::opencvdetectInThread(){
   // image_into_ipl(buff_[(buffIndex_ + 1)%3],ipl_colordetect);
   // 所圈颜色的面积>最小圆面积x0.636
   cv::Mat frame = cv::cvarrToMat(ipl_);//856,480,3
+  // cv::Mat frame;
   cv::Mat dst;
   cv::Mat kernel=cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
   std::vector<std::vector<cv::Point>> contours;
@@ -493,8 +494,10 @@ void *YoloObjectDetector::opencvdetectInThread(){
   cv::Point2f center;
   float radius=20;
   double maxArea=0;
+  // cv::cvtColor(_frame, frame, cv::COLOR_BGR2HSV);
+  // cv::inRange(frame, cv::Scalar(0,60,129), cv::Scalar(194,170,180), dst);
   cv::inRange(frame, cv::Scalar(0,0,85), cv::Scalar(76,60,255), dst);
-  cv::morphologyEx(dst,dst,cv::MORPH_OPEN,kernel); 
+  cv::morphologyEx(dst,dst,cv::MORPH_CLOSE,kernel); 
   //边界
   cv::findContours(dst, contours, hireachy, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point(0,0));
   if (contours.size() > 0){ 
@@ -505,22 +508,24 @@ void *YoloObjectDetector::opencvdetectInThread(){
         cv::minEnclosingCircle(contours[static_cast<int>(i)], center, radius); 
       }
     }
-    if(radius*radius*M_PI*0.5<maxArea){//可靠
+    if(radius*radius*M_PI*0.4<maxArea){//可靠
       if(radius>2.5)
       printf("find!! %f\t%f\t%f\n",center.x,center.y,radius);
     }else{
       printf("probabe %f\t%f\t%f\n",center.x,center.y,radius);
     }
   } 
+
   //add PIC
   printf("%d\n",roiBoxes_[0].num);
   if(roiBoxes_[0].num==0){//yolo can't found
     //center.x,center.y
-    if(maxArea!=0&&radius*radius*M_PI*0.5<maxArea&&radius>5){
+    if(maxArea!=0&&radius*radius*M_PI*0.4<maxArea&&radius>3){
       printf("using opencv detect!\n");
       float x=428.0*center.x/frame.cols;//640
       float y=240.0*center.y/frame.rows;//358
-      PIDadjust(x,y,4*radius*radius);
+      if(x>5&&x<423&&y>3&&y<237)
+        PIDadjust(x,y,4*radius*radius);
     }
   }else{//yolo found
     float xmin = (roiBoxes_[0].x - roiBoxes_[0].w / 2) * frameWidth_;
@@ -593,6 +598,13 @@ void YoloObjectDetector::yolo()
     }
     std::this_thread::sleep_for(wait_duration);
   }
+#ifdef BEBOP_CONTROL //add 20181013
+  control.linear.x=0;//前进 后退
+  control.linear.y=0;//转左 转右
+  control.linear.z=1;//上升 下降
+  control.angular.z=0;//逆转 顺转
+  cmd_pub.publish(control);
+#endif
 
   std::thread detect_thread;
   std::thread fetch_thread;
