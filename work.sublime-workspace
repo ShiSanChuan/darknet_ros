@@ -529,10 +529,10 @@
 			}
 		},
 		{
-			"contents": "/                                                             \n-rw-rw-r--  1 shisanchuan shisanchuan   270 10月  15 10:45 .git\nignore                                                        \n-rw-rw-r--  1 shisanchuan shisanchuan  1550 9月   23 14:13 LICE\nNSE                                                           \n-rw-rw-r--  1 shisanchuan shisanchuan  4485 10月  24 16:42 READ\nME.md                                                         \n-rw-rw-r--  1 shisanchuan shisanchuan 26014 10月  19 14:07 work\n.sublime-workspace                                            \nshisanchuan@ssc:~/catkin_ws/src/darknet_ros$ git push         \n对 象 计 数 中 : 34, 完 成 .                                         \nDelta compression using up to 4 threads.                      \n压 缩 对 象 中 : 100% (34/34), 完 成 .                               \n写 入 对 象 中 : 100% (34/34), 257.03 MiB | 783.00 KiB/s, 完 成 .    \nTotal 34 (delta 5), reused 0 (delta 0)                        \nremote: Resolving deltas: 100% (5/5), completed with 3 local o\nbjects.                                                       \nremote: error: GH001: Large files detected. You may want to tr\ny Git Large File Storage - https://git-lfs.github.com.        \nremote: error: Trace: 755fa27f73e28737db79570ff3feb1ee        \nremote: error: See http://git.io/iEPt8g for more information. \nremote: error: File darknet_ros/yolo_network_config/weights/yo\nlov3-MBZIRC_5000.weights is 234.92 MB; this exceeds GitHub's f\nile size limit of 100.00 MB                                   \nTo https://ShiSanChuan:421127ssc@github.com/ShiSanChuan/darkne\nt_ros.git                                                     \n ! [remote rejected] master -> master (pre-receive hook declin\ned)                                                           \nerror: 无 法 推 送 一 些 引 用 到  'https://ShiSanChuan:421127ssc@githu\nb.com/ShiSanChuan/darknet_ros.git'                            \nshisanchuan@ssc:~/catkin_ws/src/darknet_ros$                  \n",
+			"contents": "shisanchuan@ssc:~/catkin_ws/src/darknet_ros$                         \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n                                                                     \n",
 			"settings":
 			{
-				"buffer_size": 1953,
+				"buffer_size": 3570,
 				"line_ending": "Unix",
 				"name": "Terminal (bash)",
 				"read_only": true,
@@ -736,16 +736,20 @@
 		"selected_items":
 		[
 			[
+				"push",
+				"Git: Push"
+			],
+			[
 				"com",
 				"Git: Commit"
 			],
 			[
-				"add",
+				"git a",
 				"Git: Add All"
 			],
 			[
-				"push",
-				"Git: Push"
+				"add",
+				"Git: Add All"
 			],
 			[
 				"co",
@@ -806,10 +810,6 @@
 			[
 				"git c",
 				"Git: Commit"
-			],
-			[
-				"git a",
-				"Git: Add All"
 			],
 			[
 				"git co",
@@ -988,7 +988,7 @@
 	],
 	"find":
 	{
-		"height": 32.0987654321
+		"height": 28.7037037037
 	},
 	"find_in_files":
 	{
@@ -1169,8 +1169,8 @@
 						"selection":
 						[
 							[
-								1177,
-								1177
+								1013,
+								1013
 							]
 						],
 						"settings":
@@ -1178,7 +1178,7 @@
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1008.0,
+						"translation.y": 655.555555556,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1195,15 +1195,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1953,
+						"buffer_size": 3570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1935,
-								1935
+								45,
+								45
 							]
 						],
 						"settings":
@@ -1231,7 +1231,7 @@
 							},
 							"terminal_view_last_cursor_pos":
 							[
-								30,
+								0,
 								45
 							],
 							"word_wrap": false
@@ -1248,7 +1248,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0987654321
+		"height": 28.7037037037
 	},
 	"input":
 	{
@@ -1316,7 +1316,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 59.2592592593
+		"height": 52.7777777778
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -180,6 +180,11 @@ class YoloObjectDetector
   geometry_msgs::Twist control;
   std_msgs::Empty command;
 
+  //add a Map control 20181103
+  std::vector<std::vector<int> > Map;
+  cv::Point2f now_point;
+  float now_angle;
+
   // Darknet.
   char **demoNames_;
   image **demoAlphabet_;
@@ -265,6 +270,16 @@ class YoloObjectDetector
   void *publishInThread();
 
   void PIDadjust(float x,float y,float Area);//add 20181013
+
+  void InitMap(int &col,int &row,int &s_x,int &s_y);
+
+  void setMap(int x,int y,int probality);
+
+  void UpdataMap(void);//20181103
+
+  void UsingMap(void);//20181103
+
+  void PrintMap(void);//20181103
 };
 
 } /* namespace darknet_ros*/

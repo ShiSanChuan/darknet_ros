@@ -17,6 +17,9 @@
     <param name="weights_path"          value="$(arg yolo_weights_path)" />
     <param name="config_path"           value="$(arg yolo_config_path)" />
     <param name="bebop_topic_head"           value="/bebop" />
+    <param name="Virtual_Map_Size"   type="int"  value="20" />
+    <param name="start_Point_x"   type="int"  value="0" />
+    <param name="start_Point_y"   type="int"  value="0" />
   </node>
 
  <!--<node name="republish" type="republish" pkg="image_transport" output="screen" 	args="compressed in:=/front_camera/image_raw raw out:=/camera/image_raw" /> -->

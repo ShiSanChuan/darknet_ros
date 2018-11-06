@@ -3,7 +3,7 @@
 - yolov3目标识别
 - opencv颜色识别
 - 物体追踪
-- 无目标搜索（施工中）
+- 无目标搜索（施工中ing20181106）
 
 ## Overview
 
@@ -93,6 +93,13 @@ catkin_wc/src/darknet_ros/darknet_ros/launch/yolo_v3.launch
 <param name="bebop_topic_head"  value="/bebop" />
 ```
 - 若要修改识别目标，先按照darknet官网训练目标的模型文件，在调节下远处目标识别的大概颜色。
+
+## Some Problem
+- 在代码里面加入无目标时的路径搜索，参考的是这个大佬的[网页动画](http://www.webhek.com/post/pathfinding.html),先在20x20的框图以起始和中心（或者其他目标点），所以没有目标时无人机回往中心点靠；
+- 问题一是没有ＧＰＳ，所以每次发送控制命令时计算无人机坐标有点难；
+- 问题二是无人机摄像头识别范围，每次无人机经过地图的点，将没有目标的地图点的高度下降，再随时间上涨
+- 问题三是有摄像头通过ｏｐｅｎｃｖ识别到物体时，如何确定物体在地图中的点（距离），靠近后用ｙｏｌｏ下不是该物体同样方法至该点至最负
+
 
 ## Contributier
 - 队友[Voyager](https://github.com/VoyagerIII)

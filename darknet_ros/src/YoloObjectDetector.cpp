@@ -92,7 +92,8 @@ void YoloObjectDetector::init()
   std::string configModel;
   std::string weightsModel;
   std::string bebop_head;//bebop 话题的头
-
+  int Map_size;//Virtual Map size
+  int start_x,start_y;
   // Threshold of object detection.
   float thresh;
   nodeHandle_.param("yolo_model/threshold/value", thresh, (float) 0.3);
@@ -107,7 +108,11 @@ void YoloObjectDetector::init()
 
   //bebop head 20181013 just like /bebop/****
   nodeHandle_.param("bebop_topic_head", bebop_head, std::string("/bebop"));
-
+  //20181105 give a Virtual Map
+  nodeHandle_.param("Virtual_Map_Size",Map_size,10);
+  nodeHandle_.param("start_Point_x",start_x,Map_size/2);
+  nodeHandle_.param("start_Point_x",start_y,Map_size/2);
+  InitMap(Map_size,Map_size,start_x,start_y);
   // Path to config file.
   nodeHandle_.param("yolo_model/config_file/name", configModel, std::string("yolov2-tiny.cfg"));
   nodeHandle_.param("config_path", configPath, std::string("/default"));
@@ -449,6 +454,77 @@ void *YoloObjectDetector::displayInThread(void *ptr)
   }
   return 0;
 }
+// Init Map
+void YoloObjectDetector::InitMap(int &col,int &row,int &s_x,int &s_y){
+  Map=std::vector<std::vector<int> >(col,std::vector<int>(row,0));
+  now_point.x=0.0;
+  now_point.y=0.0;
+  now_angle=0.0;
+  setMap(col/2,row/2,100);
+}
+void YoloObjectDetector::setMap(int x,int y,int probality){
+  Map[x][y]=probality;
+  if(x-1>=0&&Map[x-1][y]<probality-1)setMap(x-1,y,probality-1);
+  if(y-1>=0&&Map[x][y-1]<probality-1)setMap(x,y-1,probality-1);
+  if(x+1<Map[0].size()&&Map[x+1][y]<probality-1)setMap(x+1,y,probality-1);
+  if(y+1<Map.size()&&Map[x][y+1]<probality-1)setMap(x,y+1,probality-1);
+}
+// using control updata Map
+void YoloObjectDetector::UpdataMap(void){
+  static double last_time=what_time_is_it_now();
+  float disstime=what_time_is_it_now()-last_time;
+  printf("\ttime diss %f\n",disstime);
+  now_point.x+=std::sin(now_angle)*control.linear.x*disstime;
+  now_point.y+=std::cos(now_angle)*control.linear.x*disstime;
+  now_angle+=control.angular.z*disstime;
+  printf("axis is x: %f, y: %f ",now_point.x,now_point.y);
+  last_time= what_time_is_it_now();
+}
+// using Map get a control
+void YoloObjectDetector::UsingMap(void){
+  int col=Map[0].size(),row=Map.size();
+
+  int _x=(int)now_point.x,_y=(int)now_point.y;
+
+	int max_probality=Map[_x][_y];
+	cv::Point aim_point(_x,_y);
+	std::vector<cv::Point> max_point{cv::Point(_x-1,_y-1),cv::Point(_x,_y-1),cv::Point(_x+1,_y-1),
+								cv::Point(_x-1,_y),cv::Point(_x+1,_y),
+								cv::Point(_x-1,_y+1),cv::Point(_x,_y+1),cv::Point(_x+1,_y+1)};
+	for_each(max_point.begin(),max_point.end(),[&](cv::Point &elem){
+		if(elem.x>=0&&elem.x<col&&elem.y>=0&&elem.y<row){
+			if(Map[elem.x][elem.y] > max_probality){
+				aim_point.x=elem.x;
+				aim_point.y=elem.y;
+				max_probality=Map[elem.x][elem.y];
+			}
+		}
+	});
+  float dx=aim_point.x-now_point.x;
+  float dy=aim_point.y-now_point.y;
+  printf("yuan: %f\tnow_angle: %f \t",std::asin(dx/std::sqrt(dx*dx+dy*dy)),now_angle);
+  float pangle=std::asin(dx/std::sqrt(dx*dx+dy*dy))-now_angle;
+  control.linear.x=0.05;//前进 后退
+  control.linear.y=0;//转右 转左
+  control.linear.z=0;//上升 下降
+  //逆转 顺转
+  control.angular.z=abs(pangle)<M_PI?pangle:(
+  pangle>0?(pangle-2*M_PI):(pangle+dx*M_PI)
+  );
+  control.angular.z=-control.angular.z;//弄错了　左为正，右为负
+  // ROS
+  cmd_pub.publish(control);
+  // control.linear.x=0.0;//前进 后退 测试
+  control.angular.z=-control.angular.z;
+}
+void YoloObjectDetector::PrintMap(void){
+  std::for_each(Map.begin(),Map.end(),[](std::vector<int> &elem){
+    std::for_each(elem.begin(),elem.end(),[](int &i){
+      std::cout<<i<<" ";
+    });
+    std::cout<<std::endl;
+  });
+}
 //-1.0~1.0
 void YoloObjectDetector::PIDadjust(float x,float y,float Area){
   static float pre_minor_x=0;
@@ -466,13 +542,15 @@ void YoloObjectDetector::PIDadjust(float x,float y,float Area){
   pre_minor_x=aimx-x;
 
   control.linear.z=(aimy-y)/120+((aimy-y)-pre_minor_y)*0.005;
-  control.linear.z*=0.5;
-  if(control.linear.z>0.5)control.linear.z=0.5;
-  if(control.linear.z<-0.5)control.linear.z=-0.5;
+  control.linear.z*=0.4;
+  if(control.linear.z>0.4)control.linear.z=0.4;
+  if(control.linear.z<-0.4)control.linear.z=-0.4;
+  pre_minor_y=aimy-y;
 
   control.linear.x=(std::sqrt(aimarea)-std::sqrt(Area))/264.57;
   if(control.linear.x>0.25)control.linear.x=0.25;
   if(control.linear.x<-0.25)control.linear.x=-0.25;
+
   // printf("Area: %f\n",Area);
   // printf("%f\t%f\n",aimx,x);
   // printf("%f\t%f\n",aimy,y);
@@ -481,12 +559,9 @@ void YoloObjectDetector::PIDadjust(float x,float y,float Area){
   cmd_pub.publish(control);
 }
 void *YoloObjectDetector::opencvdetectInThread(){
-  //image 在buff_[(buffIndex_ + 1)%3]中 
-  //cv::Mat cvImage = cv::cvarrToMat(ipl_);
-  // image_into_ipl(buff_[(buffIndex_ + 1)%3],ipl_colordetect);
+  
   // 所圈颜色的面积>最小圆面积x0.636
   cv::Mat frame = cv::cvarrToMat(ipl_);//856,480,3
-  // cv::Mat frame;
   cv::Mat dst;
   cv::Mat kernel=cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
   std::vector<std::vector<cv::Point>> contours;
@@ -515,17 +590,18 @@ void *YoloObjectDetector::opencvdetectInThread(){
       printf("probabe %f\t%f\t%f\n",center.x,center.y,radius);
     }
   } 
-
+  UpdataMap();//记录地图
   //add PIC
   printf("%d\n",roiBoxes_[0].num);
   if(roiBoxes_[0].num==0){//yolo can't found
     //center.x,center.y
-    if(maxArea!=0&&radius*radius*M_PI*0.4<maxArea&&radius>3){
+    float x=428.0*center.x/frame.cols;//640
+    float y=240.0*center.y/frame.rows;//358
+    if(x>5&&x<423&&y>3&&y<237&&maxArea!=0&&radius*radius*M_PI*0.4<maxArea&&radius>3){
       printf("using opencv detect!\n");
-      float x=428.0*center.x/frame.cols;//640
-      float y=240.0*center.y/frame.rows;//358
-      if(x>5&&x<423&&y>3&&y<237)
-        PIDadjust(x,y,4*radius*radius);
+      PIDadjust(x,y,4*radius*radius);
+    }else{//启用无目标搜索
+      UsingMap();
     }
   }else{//yolo found
     float xmin = (roiBoxes_[0].x - roiBoxes_[0].w / 2) * frameWidth_;
@@ -537,7 +613,6 @@ void *YoloObjectDetector::opencvdetectInThread(){
     float y=((ymin+ymax)/2)*240.0/frame.rows;
     printf("useing yolo detect!\n");
     PIDadjust(x,y,(xmax-xmin)*(ymax-ymin));
-    // }
   }
   return 0;
 }
